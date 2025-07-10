@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Web Application</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-900">
+    <div class="mt-20 px-4 py-6">
+        <div class="bg-slate-600 rounded-lg pb-6 shadow-lg shadow-cyan-900 mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl">
+            <h1 class="text-center text-3xl font-bold tracking-wider text-cyan-500 py-6">Todo List</h1>
+            <div class="flex justify-between px-6">
+                <input type="text" id="todo" placeholder="Add todo..." autocomplete="off"
+                    class="bg-slate-900 text-white rounded-sm px-4 w-4/10 focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                <input type="date" id="tanggal"
+                    class="bg-slate-900 text-white rounded-sm px-4 w-4/10 focus:outline-none focus:ring-1 focus:ring-cyan-500">
+                <button type="submit" id="submit"
+                    class="bg-cyan-500 p-2 rounded-md cursor-pointer focus:ring-2 focus:ring-cyan-200">
+                    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 12h14m-7 7V5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex py-8 justify-between items-center px-6">
+                <div class="relative transition-all duration-500">
+                    <button type="submit" id="filter"
+                    class="transition-all duration-500 bg-slate-900 px-6 py-2 rounded-md text-white font-semibold text-lg tracking-wide cursor-pointer focus:ring-1 focus:ring-cyan-500">
+                    Filter</button>
+                    <button type="submit"
+                    class="z-0 transition-all duration-500 scale-0 absolute top-0 left-0 bg-slate-900 px-6 py-2 rounded-md text-white font-semibold text-lg tracking-wide cursor-pointer focus:ring-1 focus:ring-cyan-500">
+                    ShowAll</button>
+                    <button type="submit"
+                    class="z-0 transition-all duration-500 scale-0 absolute top-0 left-0 bg-slate-900 px-6 py-2 rounded-md text-white font-semibold text-lg tracking-wide cursor-pointer focus:ring-1 focus:ring-cyan-500">
+                    Pending</button>
+                    <button type="submit"
+                    class="z-0 transition-all duration-500 scale-0 absolute top-0 left-0 bg-slate-900 px-6 py-2 rounded-md text-white font-semibold text-lg tracking-wide cursor-pointer focus:ring-1 focus:ring-cyan-500">
+                    Completed</button>
+                </div>
+                <button type="submit" id="deleteall"
+                    class="bg-cyan-500 px-6 py-2 rounded-md text-white font-semibold text-lg tracking-wide cursor-pointer focus:ring-2 focus:ring-cyan-200">
+                    Delete All</button>
+            </div>
+            <div class="px-6">
+                <div id="parentUl" class="bg-slate-900 rounded-md text-white overflow-hidden">
+                    <div
+                        class="flex justify-around capitalize py-4 w-full border-b-3 border-slate-950 bg-slate-950 opacity-70">
+                        <div>task</div>
+                        <div>due date</div>
+                        <div>status</div>
+                        <div>actions</div>
+                    </div>
+                    <div id="notask" class="text-white flex justify-center tracking-wider py-14 font-semibold text-lg">
+                        No Task Found
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

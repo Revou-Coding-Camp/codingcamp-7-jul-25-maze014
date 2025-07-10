@@ -1,0 +1,23 @@
+input::placeholder {
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+}
+
+/* Chrome, Safari, dan Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* IE dan Edge */
+.no-scrollbar {
+  -ms-overflow-style: none;
+}
+
+/* Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
